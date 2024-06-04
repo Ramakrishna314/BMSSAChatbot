@@ -62,15 +62,7 @@ body {
     overflow-y: auto;
     padding: 10px;
   }   
-  .input-box {
-    box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    margin-top: auto; /* This will push .App to the bottom */
-    
-  }
+ 
   
   #userMessage {
     flex-grow: 1;
@@ -142,8 +134,8 @@ body {
   padding: 5px 10px;
   border-radius: 10px;
   margin: 5px 0;
-  float: right;
-  clear: both;
+ order: 1;
+
 
   
 }
@@ -151,6 +143,9 @@ body {
   text-align: right; /* Align user messages to the right */
   margin-bottom: 10px;
   position: relative;
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Center items vertically */
+  justify-content: flex-end;
 }
 
 .bot-message {
@@ -178,24 +173,22 @@ body {
 .bot-message-container {
   display: flex; /* Use flexbox to align items */
   align-items: center; /* Center items vertically */
-  margin-bottom: 0;
+  
   color: black;
 }
+
 .bot-image {
   width: 25px; /* Adjust the width of the bot image */
   height: 25px; /* Adjust the height of the bot image */
   margin-right: 10px; /* Adjust the spacing between the image and the message */
 }
-.user-message-container {
-  display: flex; /* Use flexbox to align items */
-  align-items: center; /* Center items vertically */
-  justify-content: flex-end; /* Align items to the right */
-}
+
 
 .user-image {
   width: 25px; /* Adjust the width of the user image */
   height: 25px; /* Adjust the height of the user image */
-  margin-right: 10px; /* Adjust the spacing between the message and the image */
+  margin-left: 10px; /* Adjust the spacing between the message and the image */
+  order: 2;
   
 }
 .feedback-container {
@@ -228,10 +221,25 @@ body {
 .time {
     position: absolute;
     bottom: -20px; /* Adjust this value to place the time where you want */
-    right: 10px; /* Adjust this value to place the time where you want */
+    right: 60px; /* Adjust this value to place the time where you want */
     font-size: 0.8em;
     color: gray;
   }
+  .powered-by {
+    text-align: right;
+    padding: 10px;
+    font-size: 0.8em;
+    color: black;
+    position: absolute;
+    bottom: 0px;
+    right: 20px;
+    z-index: 1001; /* Ensure it stays above other elements */
+    background-color: white; /* Optional: If you want a background color */
+  }
+  .medha-tech {
+    color: red;
+  }
+  
 
 
 

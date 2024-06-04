@@ -30,50 +30,6 @@ document.addEventListener('DOMContentLoaded', function() {
        
     
     });
-
-   
-
-    function sendMessage() {
-        var message = userInput.value.trim();
-        if (message === '') return;
-
-        console.log("User Input:", message);
-    
-    
-        displayUserMessage(message);
-    
-        // Send user input to the server for processing
-        fetch('/send-message', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ message: message })
-        })
-        .then(response => {
-            // Check if response is empty
-            if (!response.ok) {
-                throw new Error('Network response was not ok');
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log('Response from server:', data); // Debugging statement
-            if (data && data.response) {
-                displayBotMessage(data.response);
-                // Generate options
-                if (data.intent === 'greeting') {
-                    setTimeout(function() {
-                        displayOptions();
-                    }, 500);
-                }
-            } else {
-                console.error('Invalid response from server:', data); // Debugging statement
-            }
-        });
-    
-        userInput.value = '';
-    }
     function sendGreetingMessage() {
         chatBox.innerHTML = ''; // Clear chat history
         var greetingContainer = document.createElement('div');
@@ -144,20 +100,19 @@ document.addEventListener('DOMContentLoaded', function() {
         var messageContainer = document.createElement('div');
         messageContainer.classList.add('user-message-container');
     
-        // Create the user image element
-        var userImage = document.createElement('img');
-        userImage.src = 'static/assets/user-image.png'; // Replace 'path_to_your_user_image.jpg' with the actual path to your user image
-        userImage.classList.add('user-image');
-    
         // Create the user message element
         var messageElement = document.createElement('p');
         messageElement.textContent = message;
         messageElement.classList.add('user-message');
-        messageElement.style.color = 'white';
     
-        // Append the user image and message to the container
-        messageContainer.appendChild(userImage);
+        // Create the user image element
+        var userImage = document.createElement('img');
+        userImage.src = 'static/assets/user-image.png'; // Replace with the actual path to your user image
+        userImage.classList.add('user-image');
+    
+        // Append the user message and image to the container
         messageContainer.appendChild(messageElement);
+        messageContainer.appendChild(userImage);
     
         // Display time at the bottom of the user message box
         var timeElement = document.createElement('span');
@@ -172,6 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
         chatBox.scrollTop = chatBox.scrollHeight;
     }
+    
     
     function displayBotMessage(message) {
         var messageContainer = document.createElement('div');
@@ -192,20 +148,11 @@ document.addEventListener('DOMContentLoaded', function() {
             link.style.color = 'white';
         });
     
-        var timeContainer = document.createElement('div');
-        timeContainer.classList.add('time-container');
-    
-        var timeElement = document.createElement('span');
-        timeElement.classList.add('time');
-        var currentTime = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit', hour12: true });
-        timeElement.textContent = currentTime;
-    
-        timeContainer.appendChild(timeElement);
     
         // Append the bot image, message, and time container to the message container
         messageContainer.appendChild(botImage);
         messageContainer.appendChild(messageElement);
-        messageContainer.appendChild(timeContainer);
+        
     
         chatBox.appendChild(messageContainer);
         chatBox.scrollTop = chatBox.scrollHeight;
@@ -284,6 +231,8 @@ document.addEventListener('DOMContentLoaded', function() {
         var optionElement = document.createElement('div');
         optionElement.textContent = optionText;
         optionElement.classList.add('option');
+        var textWidth = optionText.length * 10; // Adjust the factor as needed
+        optionElement.style.width = textWidth + 'px';
         optionElement.style.marginBottom = '10px';
         optionElement.style.paddingLeft = '30px';
         
