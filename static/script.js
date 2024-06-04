@@ -264,62 +264,104 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     function fetchBotResponse(optionText) {
         if (optionText.toLowerCase() === 'academics') {
-            displayAcademicsOptions()
+            setTimeout(function() {
+                displayAcademicsOptions();
+            },1000);
            
             return; // Exit the function
 
         }
         if (optionText.toLowerCase() === 'b.arch') {
-           
-            displayBotMessageWithoutImage('BMSSA offers 5 year B.Arch Programme approved by Council of Architecture, (CoA), Govt. of Karnataka and is affiliated to Visvesvaraya Technological University, Belgaum. The Bachelor of Architecture professional degree program, aims at enabling students to develop an analytical and sensitive approach towards design to make them responsible future generation architects.');
-            displayBotMessageWithoutImage('To know more: <a href="https://www.bmssa.ac.in/b_arch.php" target="_blank">Click here</a>');
-            displayFollowUpOptions();
+            setTimeout(function() {
+                displayBotMessageWithoutImage('BMSSA offers 5 year B.Arch Programme approved by Council of Architecture, (CoA), Govt. of Karnataka and is affiliated to Visvesvaraya Technological University, Belgaum. The Bachelor of Architecture professional degree program, aims at enabling students to develop an analytical and sensitive approach towards design to make them responsible future generation architects.');
+            }, 1000); // Adjust the delay time as needed
+            setTimeout(function() {
+                displayBotMessageWithoutImage('To know more: <a href="https://www.bmssa.ac.in/b_arch.php" target="_blank">Click here</a>');
+            }, 2000); // Adjust the delay time as needed
+            setTimeout(function() {
+                displayFollowUpOptions();
+            }, 3000); // Adjust the delay time as needed
             return; // Exit the function
         }
         if (optionText.toLowerCase() === 'm.arch') {
-           
-            displayBotMessageWithoutImage('BMSSA offers 2 year Masters of Architecture Programme approved by Council of Architecture, (CoA), Govt. of Karnataka and is affiliated to Visvesvaraya Technological University, Belgaum. The M.Arch program awards the students a professional in Urban Design, combining rigorous training of the skills and disciplines with critical and advanced outlook on social and environmental awareness.');
-            displayBotMessageWithoutImage('To know more: <a href="https://www.bmssa.ac.in/m_arch.php" target="_blank">Click here</a>');
-            displayFollowUpOptions();
+            setTimeout(function() {
+                displayBotMessageWithoutImage('BMSSA offers 2 year Masters of Architecture Programme approved by Council of Architecture, (CoA), Govt. of Karnataka and is affiliated to Visvesvaraya Technological University, Belgaum. The M.Arch program awards the students a professional in Urban Design, combining rigorous training of the skills and disciplines with critical and advanced outlook on social and environmental awareness.');
+            }, 1000); // Adjust the delay time as needed
+            setTimeout(function() {
+                displayBotMessageWithoutImage('To know more: <a href="https://www.bmssa.ac.in/m_arch.php" target="_blank">Click here</a>');
+            }, 2000); // Adjust the delay time as needed
+            setTimeout(function() {
+                displayFollowUpOptions();
+            }, 3000); // Adjust the delay time as needed
             return; // Exit the function
         }
         if (optionText.toLowerCase() === 'ph.d') {
-           
-            displayBotMessageWithoutImage('Ph.D (THE CENTRE for INNOVATION and DESIGN MANAGEMENT VTU RESEARCH CENTRE) The Centre for Innovation and Design Management, the R & D wing of BMS School of Architecture is now a recognized VTU “Research Centre”. Presently, we have a group of committed Ph.D research scholars who are investigating topics ranging from participatory planning, energy efficiency in architecture to application of hydrology in Urban systems. The scholars are encouraged to attend relevant workshops that can help them in developing efficient solutions for the schemes. They are also inspired to hold discussions with guides and other professionals of their choice to help them progress in their proposals.');
-            displayBotMessageWithoutImage('To know more: <a href="https://www.bmssa.ac.in/ph_d.php" target="_blank">Click here</a>');
-            displayFollowUpOptions();
+            setTimeout(function() {
+                displayBotMessageWithoutImage('Ph.D (THE CENTRE for INNOVATION and DESIGN MANAGEMENT VTU RESEARCH CENTRE) The Centre for Innovation and Design Management, the R & D wing of BMS School of Architecture is now a recognized VTU “Research Centre”. Presently, we have a group of committed Ph.D research scholars who are investigating topics ranging from participatory planning, energy efficiency in architecture to application of hydrology in Urban systems. The scholars are encouraged to attend relevant workshops that can help them in developing efficient solutions for the schemes. They are also inspired to hold discussions with guides and other professionals of their choice to help them progress in their proposals.');
+            }, 1000); // Adjust the delay time as needed
+            setTimeout(function() {
+                displayBotMessageWithoutImage('To know more: <a href="https://www.bmssa.ac.in/ph_d.php" target="_blank">Click here</a>');
+            }, 2000); // Adjust the delay time as needed
+            setTimeout(function() {
+                displayFollowUpOptions();
+            }, 3000); // Adjust the delay time as needed
             return; // Exit the function
         }
         if (optionText.toLowerCase() === 'admissions') {
-            displayBotMessageWithoutImage('BMS Educational Trust invites applications from prospective candidates for Management Quota Seats for BMS School of Architecture, Yelahanka, Bangalore - 560064');
-            displayBotMessageWithoutImage('To Submit Your Admission Inquiry Query <a href="https://docs.google.com/forms/d/e/1FAIpQLSdKv6OwnBh4sKXBV_h3SbyPZxdWpVE3PAgNhQy9HOZKTQ1tJA/viewform" target="_blank">CLICK HERE</a>');
-            displayFollowUpOptions();
+            setTimeout(function() {
+                displayBotMessageWithoutImage('BMS Educational Trust invites applications from prospective candidates for Management Quota Seats for BMS School of Architecture, Yelahanka, Bangalore - 560064');
+            }, 1000); // Adjust the delay time as needed
+            setTimeout(function() {
+                displayBotMessageWithoutImage('To Submit Your Admission Inquiry Query <a href="https://docs.google.com/forms/d/e/1FAIpQLSdKv6OwnBh4sKXBV_h3SbyPZxdWpVE3PAgNhQy9HOZKTQ1tJA/viewform" target="_blank">CLICK HERE</a>');
+            }, 2000); // Adjust the delay time as needed
+            setTimeout(function() {
+                displayFollowUpOptions();
+            }, 3000); // Adjust the delay time as needed
             return; // Exit the function
         }
         if (optionText.toLowerCase() === 'more information about our college') {
-            displayBotMessageWithoutImage('BMS School of Architecture, the 8th institution under the BMS Educational Trust, has the distinction of being established as an Independent “School of Architecture” in the year 2010. BMSSA is a center of innovation and one of the nation’s few independent architecture schools with a stated mission of being dedicated to educating future generations to be ethical professionals, creative designers and informed citizens.');
-            displayBotMessageWithoutImage('To know more: <a href="https://www.bmssa.ac.in/institution.php" target="_blank">Click here</a>');
-            displayFollowUpOptions();
-            
+            setTimeout(function() {
+                displayBotMessageWithoutImage('BMS School of Architecture, the 8th institution under the BMS Educational Trust, has the distinction of being established as an Independent “School of Architecture” in the year 2010. BMSSA is a center of innovation and one of the nation’s few independent architecture schools with a stated mission of being dedicated to educating future generations to be ethical professionals, creative designers and informed citizens.');
+            }, 1000); // Adjust the delay time as needed
+            setTimeout(function() {
+                displayBotMessageWithoutImage('To know more: <a href="https://www.bmssa.ac.in/institution.php" target="_blank">Click here</a>');
+            }, 2000); // Adjust the delay time as needed
+            setTimeout(function() {
+                displayFollowUpOptions();
+            }, 3000); // Adjust the delay time as needed
             return; // Exit the function
         }
         if (optionText.toLowerCase() === 'placements') {
-            displayBotMessageWithoutImage("The Training & Placement (T&P) Cell of BMS School of Architecture is the chief facilitator for the students to obtain placements best suited to them and primarily liaisons between Industry and the Institute. The goal of Training & Placement Cell is to provide world class training to BMS School of Architecture students. The Training & Placement Cell is dedicated to motivate and help the student community towards their placement and industrial training. This is done by training students from the first year onwards focusing on motivational skills, communication skills, interpersonal relationships, leadership qualities, group discussions and portfolio making techniques. Additionally, the Cell also provides the required infra-structural facilities to conduct group discussions besides catering to other logistics.");
-            displayBotMessageWithoutImage("EMAIL: <a href='mailto:placements@bmssa.ac.in' style='color:blue;'>placements@bmssa.ac.in</a>");
-            displayFollowUpOptions();
+            setTimeout(function() {
+                displayBotMessageWithoutImage("The Training & Placement (T&P) Cell of BMS School of Architecture is the chief facilitator for the students to obtain placements best suited to them and primarily liaisons between Industry and the Institute. The goal of Training & Placement Cell is to provide world class training to BMS School of Architecture students. The Training & Placement Cell is dedicated to motivate and help the student community towards their placement and industrial training. This is done by training students from the first year onwards focusing on motivational skills, communication skills, interpersonal relationships, leadership qualities, group discussions and portfolio making techniques. Additionally, the Cell also provides the required infra-structural facilities to conduct group discussions besides catering to other logistics.");
+            }, 1000); // Adjust the delay time as needed
+            setTimeout(function() {
+                displayBotMessageWithoutImage("EMAIL: <a href='mailto:placements@bmssa.ac.in' style='color:blue;'>placements@bmssa.ac.in</a>");
+            }, 2000); // Adjust the delay time as needed
+            setTimeout(function() {
+                displayFollowUpOptions();
+            }, 3000); // Adjust the delay time as needed
             return; // Exit the function
         }
         if (optionText.toLowerCase() === 'end conversation') {
-            displayBotMessage('Goodbye! Have a nice day.', false);
+            setTimeout(function() {
+                displayBotMessage('Goodbye! Have a nice day.', false);
+            }, 1000);
             return; // Exit the function
         }
         if (optionText.toLowerCase() === 'contact us') {
-            displayBotMessageWithoutImage('To contact us: <a href="https://www.bmssa.ac.in/contact.php" target="_blank">Click here</a>');
-            displayFollowUpOptions();
+            setTimeout(function() {
+                displayBotMessageWithoutImage('To contact us: <a href="https://www.bmssa.ac.in/contact.php" target="_blank">Click here</a>');
+            }, 1000);
+            setTimeout(function() {
+                displayFollowUpOptions();
+            },1000);
             return; // Exit the function
         }
         if (optionText.toLowerCase() === 'main menu') {
-            displayInitialOptions()
+            setTimeout(function() {
+                displayInitialOptions()
+            },1000);
         }
        
     
