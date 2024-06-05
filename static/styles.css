@@ -25,6 +25,7 @@ body {
     bottom: 20px;
     right: 20px;
     z-index: 1000;
+    
   }
   
   .chatbox {
@@ -236,22 +237,7 @@ body {
     z-index: 1001; /* Ensure it stays above other elements */
     background-color: white; /* Optional: If you want a background color */
   }
+  
   .medha-tech {
     color: red;
   }
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
- 
-  

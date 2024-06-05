@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var closeButton = document.querySelector('.close-button');
     var refreshButton = document.querySelector('.refresh-button');
     closeButton.addEventListener('click', closeChatbox);
+    const botImagepath = "./static/assets/bot-image.png";
     function closeChatbox() {
         chatBox.innerHTML = '';
         chatboxContainer.style.display = 'none';
@@ -30,6 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
        
     
     });
+    
+
     function sendGreetingMessage() {
         chatBox.innerHTML = ''; // Clear chat history
         var greetingContainer = document.createElement('div');
@@ -107,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
         // Create the user image element
         var userImage = document.createElement('img');
-        userImage.src = 'static/assets/user-image.png'; // Replace with the actual path to your user image
+        userImage.src = './static/assets/user-image.png'; // Replace with the actual path to your user image
         userImage.classList.add('user-image');
     
         // Append the user message and image to the container
@@ -135,7 +138,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
         // Create the bot image element
         var botImage = document.createElement('img');
-        botImage.src = '/static/assets/bot-image.png'; // Replace 'path_to_your_bot_image.png' with the actual path to your bot image
+        botImage.src = botImagepath; // Replace 'path_to_your_bot_image.png' with the actual path to your bot image
         botImage.classList.add('bot-image');
     
         var messageElement = document.createElement('p');
