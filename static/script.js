@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var chatboxContainer = document.querySelector('.chatbox-container');
     var closeButton = document.querySelector('.close-button');
     var refreshButton = document.querySelector('.refresh-button');
+    var closeSpeechBubbleButton = document.getElementById('closeSpeechBubble');
     closeButton.addEventListener('click', closeChatbox);
     const botImagepath = "./static/assets/bot-image.png";
     function closeChatbox() {
@@ -31,6 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
        
     
     });
+    closeSpeechBubbleButton.addEventListener('click', function() {
+        document.querySelector('.speech-bubble').style.display = 'none';
+    });
     
 
     function sendGreetingMessage() {
@@ -38,16 +42,12 @@ document.addEventListener('DOMContentLoaded', function() {
         var greetingContainer = document.createElement('div');
         greetingContainer.classList.add('greeting-container');
 
-        var botImage = document.createElement('img');
-        botImage.src = 'static/assets/BMSSAImage.png'; // Update with actual path to your bot image
-        botImage.classList.add('centered-image');
+        var imageElement = document.createElement('img');
+        imageElement.src = './static/assets/BMSSAImage.png'; // Update with actual path to your image
+        imageElement.classList.add('centered-image');
+        imageElement.style.width = '100%'; // Make image width of the chat box
 
-        var greetingText = document.createElement('p');
-        greetingText.innerHTML = "BMSSA ChatBot<br>Our virtual assistant is here to help you.";
-        greetingText.classList.add('greeting-text');
-
-        greetingContainer.appendChild(botImage);
-        greetingContainer.appendChild(greetingText);
+        greetingContainer.appendChild(imageElement);
         chatBox.appendChild(greetingContainer);
 
         setTimeout(function() {
@@ -65,8 +65,8 @@ document.addEventListener('DOMContentLoaded', function() {
     function displayInitialOptions() {
         displayOption('Academics');
         displayOption('Admissions');
-        displayOption('More Information about our college');
         displayOption('Placements');
+        displayOption('More Information about our college');
         displayOption('End conversation');
     }
     function displayAcademicsOptions() {
@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function displayFollowUpOptions() {
         displayBotMessage("What other information would you like to know?");
         displayOption('Contact Us');
-        displayOption('Main Menu');
+        displayOption('MainMenu');
         displayOption('End Conversation');
     }
     
@@ -234,11 +234,11 @@ document.addEventListener('DOMContentLoaded', function() {
         var optionElement = document.createElement('div');
         optionElement.textContent = optionText;
         optionElement.classList.add('option');
-        var textWidth = optionText.length * 10; // Adjust the factor as needed
+        var textWidth = optionText.length * 8; // Adjust the factor as needed
         optionElement.style.width = textWidth + 'px';
         optionElement.style.marginBottom = '10px';
-        optionElement.style.paddingLeft = '30px';
-        
+        optionElement.style.paddingLeft = '10px';
+        optionContainer.style.paddingLeft = '10px';
         
         
         optionElement.addEventListener('click', function() {
@@ -312,7 +312,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         if (optionText.toLowerCase() === 'admissions') {
             setTimeout(function() {
-                displayBotMessageWithoutImage('BMS Educational Trust invites applications from prospective candidates for Management Quota Seats for BMS School of Architecture, Yelahanka, Bangalore - 560064');
+                displayBotMessageWithoutImage('BMS Educational Trust invites applications from prospective candidates for Management Quota Seats for BMS School of Architecture, Yelahanka, Bangalore - 560064<br>' +
+                    'ADMISSION INQUIRIES: +91 8971902122/8971129883'
+                );
             }, 1000); // Adjust the delay time as needed
             setTimeout(function() {
                 displayBotMessageWithoutImage('To Submit Your Admission Inquiry Query <a href="https://docs.google.com/forms/d/e/1FAIpQLSdKv6OwnBh4sKXBV_h3SbyPZxdWpVE3PAgNhQy9HOZKTQ1tJA/viewform" target="_blank">CLICK HERE</a>');
@@ -354,14 +356,26 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         if (optionText.toLowerCase() === 'contact us') {
             setTimeout(function() {
-                displayBotMessageWithoutImage('To contact us: <a href="https://www.bmssa.ac.in/contact.php" target="_blank">Click here</a>');
+                displayBotMessageWithoutImage(
+                    'ADDRESS<br>' +
+                    'Off BMSIT Campus, Doddaballapur Main Road,<br>' +
+                    'Avalahalli, Yelahanka, Bengaluru, Karnataka 560064<br><br>' +
+                    'PHONE<br>' +
+                    '080 29720032<br><br>' +
+                    'EMAIL<br>' +
+                    'office@bmssa.ac.in'
+                );
             }, 1000);
             setTimeout(function() {
+                displayBotMessageWithoutImage('To contact us: <a href="https://www.bmssa.ac.in/contact.php" target="_blank">Click here</a>');
+            }, 2000);
+            
+            setTimeout(function() {
                 displayFollowUpOptions();
-            },1000);
+            },3000);
             return; // Exit the function
         }
-        if (optionText.toLowerCase() === 'main menu') {
+        if (optionText.toLowerCase() === 'mainmenu') {
             setTimeout(function() {
                 displayInitialOptions()
             },1000);

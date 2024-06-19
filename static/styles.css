@@ -28,15 +28,16 @@ body {
     
   }
   
+  
   .chatbox {
     display: flex;
     flex-direction: column;
     height: 650px;
     width: 500px;
     background-color: white;
-   
     border-radius: 15px; /* Add border-radius for curved corners */
-    
+
+
   }
   
   .chatbox-heading {
@@ -168,7 +169,7 @@ body {
 }
 
 /* Apply the animation to the messenger icon when hovered */
-.messenger-icon:hover {
+.messenger-icon:hover, .speech-bubble:hover {
   animation: jump 0.5s infinite;
 }
 .bot-message-container {
@@ -241,3 +242,38 @@ body {
   .medha-tech {
     color: red;
   }
+
+  .speech-bubble {
+    position: absolute;
+    right: 100px;
+    bottom: 70px; /* Adjust this value to position the speech bubble correctly */
+    background: #f1f1f1;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    max-width: 200px;
+    font-size: 14px;
+    color: #333;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+  }
+  
+  .speech-bubble::after {
+    content: '';
+    position: absolute;
+    bottom: -20px; /* Adjust this value to position the triangle correctly */
+    left: 20px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #f1f1f1 transparent transparent transparent;
+  }
+  .speech-bubble-close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  
+  
