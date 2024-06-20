@@ -169,7 +169,7 @@ body {
 }
 
 /* Apply the animation to the messenger icon when hovered */
-.messenger-icon:hover, .speech-bubble:hover {
+.messenger-icon:hover {
   animation: jump 0.5s infinite;
 }
 .bot-message-container {

@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var imageElement = document.createElement('img');
         imageElement.src = './static/assets/BMSSAImage.png'; // Update with actual path to your image
         imageElement.classList.add('centered-image');
-        imageElement.style.width = '100%'; // Make image width of the chat box
+        imageElement.style.width = '50%'; // Make image width of the chat box
 
         greetingContainer.appendChild(imageElement);
         chatBox.appendChild(greetingContainer);
@@ -145,6 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
         messageElement.innerHTML = message.replace(/\n/g, "<br>");
         messageElement.classList.add('bot-message');
         messageElement.style.color = 'black';
+        messageElement.style.textAlign = 'justify'; // Justify the text
     
         var whiteLinks = messageElement.querySelectorAll('a');
         whiteLinks.forEach(function(link) {
@@ -171,6 +172,7 @@ document.addEventListener('DOMContentLoaded', function() {
         messageElement.innerHTML = message.replace(/\n/g, "<br>");
         messageElement.classList.add('bot-message');
         messageElement.style.color = 'black';
+        messageElement.style.textAlign = 'justify'; // Justify the text
         
 
 
